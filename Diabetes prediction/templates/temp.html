@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diabetes Prediction</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			color: #666;
+			margin-top: 50px;
+		}
+
+		form {
+			width: 500px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px #ccc;
+			margin-top: 50px;
+		}
+
+		label {
+			display: block;
+			margin-top: 20px;
+			font-weight: bold;
+			color: #666;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Diabetes Prediction</h1>
+	<form method="post" action="{{ url_for('predict') }}">
+		<label for="age">Age:</label>
+		<input type="text" id="age" name="age" required>
+		<label for="gender">Gender:</label>
+		<input type="text" id="gender" name="gender" required>
+		<label for="polyuria">Polyuria:</label>
+		<input type="text" id="polyuria" name="polyuria" required>
+		<label for="polydipsia">Polydipsia:</label>
+		<input type="text" id="polydipsia" name="polydipsia" required>
+		<label for="suddenloss">Sudden weight loss:</label>
+		<input type="text" id="suddenloss" name="suddenloss" required>
+		<label for="weakness">Weakness:</label>
+		<input type="text" id="weakness" name="weakness" required>
+		<label for="polyphagia">Polyphagia:</label>
+		<input type="text" id="polyphagia" name="polyphagia" required>
+		<label for="genital">Genital Thrush:</label>
+		<input type="text" id="genital" name="genital" required>
+		<label for="visual">Visual Blurring:</label>
+		<input type="text" id="visual" name="visual" required>
+		<label for="itching">Itching:</label>
+		<input type="text" id="itching" name="itching" required>
+		<label for="irritability">Irritability:</label>
+		<input type="text" id="irritability" name="irritability" required>
+		<label for="delayed">Delayed Healing:</label>
+		<input type="text" id="delayed" name ="delayed" required>
+		<label for="partial">Partial Paresis:</label>
+		<input type="text" id="partial" name="partial" required>
+		<label for="muscle">Muscle Stiffness:</label>
+		<input type="text" id="muscle" name="muscle" required>
+		<label for="alopecia">Alopecia:</label>
+		<input type="text" id="alopecia" name="alopecia" required>
+		<label for="obesity">Obesity:</label>
+		<input type="text" id="obesity" name="obesity" required>
+		<input type="submit" value="Predict">
+	</form>
+</body>
+</html>
